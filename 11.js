@@ -8,7 +8,6 @@ var arrays = [[1, 2, 3], [4, 5], [6]];
 function reduceArr(arr){
     var array = [];
     for (var i = 0; i < arr.length; i++){
-       // array = arr.concat(arr[i]);
        array = array.concat(arr[i]);
     }
     return array;
