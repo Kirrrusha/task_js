@@ -13,8 +13,7 @@ function range(a, b, c){
     if(typeof c === 'undefined') c = 1;
     var arr = [];
     arr.push(a);
-    var length = Math.abs(b - a);
-    
+    var length = Math.abs(b - a);    
     for(var i = 0; i < length; i++){
         arr.push(arr[i] + c);
     }
@@ -29,5 +28,12 @@ function sum(arr){
     return sum;
 }
 
+function sum2(arr){
+    return arr.reduce(function(_sum, c){
+        return _sum + c;
+    },0);
+}
+
 console.log(range(5, 2, -1));
 console.log(sum(range(1, 10)));
+console.log(sum2(range(1, 10)));
